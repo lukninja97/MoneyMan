@@ -6,7 +6,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = "BaseProject"
+rootProject.name = "TimeOn"
 include(":androidApp")
 include(":shared")
 

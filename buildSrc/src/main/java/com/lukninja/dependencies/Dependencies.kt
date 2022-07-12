@@ -1,4 +1,4 @@
-package com.solinftec.dependencies
+package com.lukninja.dependencies
 
 object Version {
 

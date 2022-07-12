@@ -1,4 +1,4 @@
-import com.solinftec.dependencies.Deps
+import com.lukninja.dependencies.Deps
 
 buildscript {
     repositories {
@@ -7,7 +7,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        with(com.solinftec.dependencies.Deps.Classpath) {
+        with(com.lukninja.dependencies.Deps.Classpath) {
             classpath(kotlin)
             classpath(androidTools)
             classpath(sqlDelight)

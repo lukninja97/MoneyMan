@@ -6,7 +6,7 @@ plugins {
 android {
     compileSdk = 32
     defaultConfig {
-        applicationId = "com.solinftec.baseproject.android"
+        applicationId = "com.lukninja.timeon.android"
         minSdk = 21
         targetSdk = 32
         versionCode = 1

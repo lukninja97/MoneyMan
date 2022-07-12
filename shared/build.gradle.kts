@@ -1,5 +1,5 @@
-import com.solinftec.dependencies.Deps
-import com.solinftec.dependencies.Version
+import com.lukninja.dependencies.Deps
+import com.lukninja.dependencies.Version
 
 plugins {
     kotlin("multiplatform")
@@ -37,7 +37,7 @@ kotlin {
         ios.deploymentTarget = "14.1"
         podfile = project.file("../iosApp/Podfile")
         framework {
-            export(Deps.Log.kermit)
+            export(com.lukninja.dependencies.Deps.Log.kermit)
             isStatic = true
         }
 
@@ -52,25 +52,25 @@ kotlin {
 
         val commonMain by getting {
             dependencies {
-                implementation(Deps.Kotlin.dateTime)
-                implementation(Deps.Ktor.ktorClientCore)
-                implementation(Deps.Ktor.ktorClientSerialization)
-                implementation(Deps.Ktor.ktorLog)
-                implementation(Deps.Kotlin.coroutinesShared){
+                implementation(com.lukninja.dependencies.Deps.Kotlin.dateTime)
+                implementation(com.lukninja.dependencies.Deps.Ktor.ktorClientCore)
+                implementation(com.lukninja.dependencies.Deps.Ktor.ktorClientSerialization)
+                implementation(com.lukninja.dependencies.Deps.Ktor.ktorLog)
+                implementation(com.lukninja.dependencies.Deps.Kotlin.coroutinesShared){
                     version{
-                        strictly(Version.kotlinCoroutinesVersion)
+                        strictly(com.lukninja.dependencies.Version.kotlinCoroutinesVersion)
                     }
                 }
-                implementation(Deps.Kotlin.serialization)
-                implementation(Deps.SqlDelight.sqlDelightRuntime)
-                implementation(Deps.SqlDelight.sqlDelightCoroutineExtensions)
-                api(Deps.Log.kermit)
-                implementation(Deps.Log.kermitCrashlytics)
-                implementation(Deps.Touchlab.commonLib)
-                implementation(Deps.Koin.koinCore)
-                implementation(Deps.Ktor.ktorContentNegotiation)
-                implementation(Deps.Ktor.ktorJson)
-                implementation(Deps.Ktor.ktorEncoding)
+                implementation(com.lukninja.dependencies.Deps.Kotlin.serialization)
+                implementation(com.lukninja.dependencies.Deps.SqlDelight.sqlDelightRuntime)
+                implementation(com.lukninja.dependencies.Deps.SqlDelight.sqlDelightCoroutineExtensions)
+                api(com.lukninja.dependencies.Deps.Log.kermit)
+                implementation(com.lukninja.dependencies.Deps.Log.kermitCrashlytics)
+                implementation(com.lukninja.dependencies.Deps.Touchlab.commonLib)
+                implementation(com.lukninja.dependencies.Deps.Koin.koinCore)
+                implementation(com.lukninja.dependencies.Deps.Ktor.ktorContentNegotiation)
+                implementation(com.lukninja.dependencies.Deps.Ktor.ktorJson)
+                implementation(com.lukninja.dependencies.Deps.Ktor.ktorEncoding)
             }
         }
         val commonTest by getting {
@@ -83,11 +83,11 @@ kotlin {
 
         val androidMain by getting {
             dependencies {
-                implementation(Deps.Kotlin.kotlinStdLib)
-                implementation(Deps.Ktor.ktorClientAndroid)
-                implementation(Deps.SqlDelight.sqlDelightAndroid)
-                implementation(Deps.Klock.klockLib)
-                implementation(Deps.Koin.koinClientAndroid)
+                implementation(com.lukninja.dependencies.Deps.Kotlin.kotlinStdLib)
+                implementation(com.lukninja.dependencies.Deps.Ktor.ktorClientAndroid)
+                implementation(com.lukninja.dependencies.Deps.SqlDelight.sqlDelightAndroid)
+                implementation(com.lukninja.dependencies.Deps.Klock.klockLib)
+                implementation(com.lukninja.dependencies.Deps.Koin.koinClientAndroid)
             }
         }
         val androidTest by getting {
@@ -100,9 +100,9 @@ kotlin {
 
         val iosMain by getting {
             dependencies {
-                implementation(Deps.Ktor.ktorClientIos)
-                implementation(Deps.SqlDelight.sqlDelightIos)
-                api(Deps.Touchlab.crashKiOSClient)
+                implementation(com.lukninja.dependencies.Deps.Ktor.ktorClientIos)
+                implementation(com.lukninja.dependencies.Deps.SqlDelight.sqlDelightIos)
+                api(com.lukninja.dependencies.Deps.Touchlab.crashKiOSClient)
             }
         }
     }
