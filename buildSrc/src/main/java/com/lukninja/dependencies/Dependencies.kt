@@ -13,6 +13,19 @@ object Version {
     const val koin = "3.1.4"
     const val gradleAGPPlugin = "7.0.3"
     const val kotlinDateTimeVersion = "0.3.1"
+    const val materialVersion = "1.5.0"
+    const val appCompatVersion = "1.3.1"
+    const val constraintVersion = "2.1.0"
+    const val navigationVersion = "2.4.2"
+    const val lifeCycleVersion = "2.4.1"
+    const val preferencesVersion = "1.1.1"
+    const val dataStoreVersion = "1.0.0"
+    const val activityVersion = "1.6.0-alpha03"
+    const val fragmentVersion = "1.5.0"
+    const val viewPager = "1.0.0"
+    const val coreVersion = "1.0.2"
+    const val playServicesLocationVersion = "18.0.0"
+    const val safeArgs = "2.4.2"
 }
 
 object Deps {
@@ -21,6 +34,7 @@ object Deps {
         const val kotlin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Version.kotlin}"
         const val androidTools = "com.android.tools.build:gradle:${Version.gradleAGPPlugin}"
         const val sqlDelight = "com.squareup.sqldelight:gradle-plugin:${Version.sqlDelightVersion}"
+        const val safeArgs = "androidx.navigation:navigation-safe-args-gradle-plugin:${Version.safeArgs}"
     }
 
     object Ktor {
@@ -69,5 +83,42 @@ object Deps {
         const val coroutinesShared =
             "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Version.kotlinCoroutinesVersion}"
         const val dateTime = "org.jetbrains.kotlinx:kotlinx-datetime:${Version.kotlinDateTimeVersion}"
+    }
+
+    object Material {
+        const val material = "com.google.android.material:material:${Version.materialVersion}"
+    }
+
+    object AppCompat {
+        const val appCompat = "androidx.appcompat:appcompat:${Version.appCompatVersion}"
+    }
+
+    object ConstraintLayout {
+        const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Version.constraintVersion}"
+    }
+
+    object Navigation {
+        const val fragment = "androidx.navigation:navigation-fragment-ktx:${Version.navigationVersion}"
+        const val ui = "androidx.navigation:navigation-ui-ktx:${Version.navigationVersion}"
+    }
+
+    object LifeCycle {
+        const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Version.lifeCycleVersion}"
+        const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Version.lifeCycleVersion}"
+    }
+
+    object Preferences{
+        const val preferences = "androidx.preference:preference-ktx:${Version.preferencesVersion}"
+    }
+
+    object DataStore{
+        const val dataStore = "androidx.datastore:datastore-preferences:${Version.dataStoreVersion}"
+    }
+    object Android {
+        const val activity = "androidx.activity:activity-ktx:${Version.activityVersion}"
+        const val fragment = "androidx.fragment:fragment-ktx:${Version.fragmentVersion}"
+        const val viewPager = "androidx.viewpager2:viewpager2:${Version.viewPager}"
+        const val core = "androidx.core:core-ktx:${Version.coreVersion}"
+        const val playServicesLocation = "com.google.android.gms:play-services-location:${Version.playServicesLocationVersion}"
     }
 }

@@ -1,13 +1,13 @@
 package com.lukninja.timeon.db
 
 import com.squareup.sqldelight.db.SqlDriver
-import com.yourappname.database.YourAppNameDatabase
+import com.timeon.database.TimeOnDatabase
 
 expect fun createDriver(): SqlDriver
 
 class DriverFactory {
-    fun createDatabase(): YourAppNameDatabase {
+    fun createDatabase(): TimeOnDatabase {
         val driver = createDriver()
-        return YourAppNameDatabase(driver)
+        return TimeOnDatabase(driver)
     }
 }

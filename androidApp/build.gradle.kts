@@ -1,6 +1,11 @@
+import com.lukninja.dependencies.Deps
+
 plugins {
     id("com.android.application")
+    id("kotlin-android")
+    id ("androidx.navigation.safeargs.kotlin")
     kotlin("android")
+    id ("kotlinx-serialization")
 }
 
 android {
@@ -17,14 +22,38 @@ android {
             isMinifyEnabled = false
         }
     }
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 }
 
 dependencies {
-    implementation(project(":shared"))
+    api(project(":shared"))
     {
         exclude("org.jetbrains.kotlinx", "kotlinx-coroutines-core")
     }
-    implementation("com.google.android.material:material:1.4.0")
-    implementation("androidx.appcompat:appcompat:1.3.1")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.0")
+    implementation(Deps.Material.material)
+    implementation(Deps.AppCompat.appCompat)
+    implementation(Deps.ConstraintLayout.constraintLayout)
+    implementation(Deps.Navigation.fragment)
+    implementation(Deps.Navigation.ui)
+    implementation(Deps.LifeCycle.liveData)
+    implementation(Deps.LifeCycle.viewModel)
+    implementation(Deps.Koin.koinClientAndroid)
+    implementation(Deps.Preferences.preferences)
+    implementation(Deps.DataStore.dataStore)
+    implementation(Deps.Android.activity)
+    implementation(Deps.Android.fragment)
+    implementation(Deps.Android.viewPager)
+    implementation(Deps.Android.playServicesLocation)
+    implementation(Deps.Android.core)
+    implementation(Deps.Kotlin.serialization)
 }

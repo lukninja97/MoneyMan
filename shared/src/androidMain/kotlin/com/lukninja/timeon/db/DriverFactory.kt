@@ -3,10 +3,10 @@ package com.lukninja.timeon.db
 import android.content.Context
 import com.squareup.sqldelight.android.AndroidSqliteDriver
 import com.squareup.sqldelight.db.SqlDriver
-import com.yourappname.database.YourAppNameDatabase
+import com.timeon.database.TimeOnDatabase
 
 lateinit var appContext: Context
 
 actual fun createDriver(): SqlDriver {
-    return AndroidSqliteDriver(YourAppNameDatabase.Schema, appContext, "yourappdatabasename.db")
+    return AndroidSqliteDriver(TimeOnDatabase.Schema, appContext, "timeondatabase.db")
 }

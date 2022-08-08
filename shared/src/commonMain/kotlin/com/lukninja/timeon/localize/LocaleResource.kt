@@ -4,8 +4,8 @@ import com.lukninja.timeon.di.getKoinInstance
 import com.lukninja.timeon.localize.language.br.localizeStringCountryBR
 import com.lukninja.timeon.localize.language.en.localizeStringCountryEN
 import com.lukninja.timeon.localize.language.es.localizeStringCountryES
+import com.timeon.database.TimeOnDatabase
 import com.yourappname.database.LocalizePreference
-import com.yourappname.database.YourAppNameDatabase
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
@@ -23,7 +23,7 @@ const val SPANISH = "ES"
 const val UNIQUE_INDEX_LOCALIZE_PREFERENCES = 1L
 
 class LocaleResource(countryCode: String? = null, regionCode: String? = null) : KoinComponent {
-    private val database: YourAppNameDatabase by inject()
+    private val database: TimeOnDatabase by inject()
 
     var currentLanguage: CountryCodeEnum
     var currentRegion: RegionCodeEnum

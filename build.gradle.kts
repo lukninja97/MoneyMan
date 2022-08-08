@@ -12,6 +12,7 @@ buildscript {
             classpath(androidTools)
             classpath(sqlDelight)
             classpath(serialization)
+            classpath(safeArgs)
         }
     }
 }

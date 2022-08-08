@@ -12,16 +12,14 @@ plugins {
 version = "1.0"
 
 sqldelight {
-    database("YourAppNameDatabase") {
-        packageName = "com.yourappname.database"
+    database("TimeOnDatabase") {
+        packageName = "com.timeon.database"
         sourceFolders = listOf("sqldelight")
     }
 }
 
-
 kotlin {
     android()
-
 
     val iosTarget: (String, org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget.() -> Unit) -> org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget = when {
         System.getenv("SDK_NAME")?.startsWith("iphoneos") == true -> ::iosArm64
@@ -47,30 +45,29 @@ kotlin {
             org.jetbrains.kotlin.gradle.plugin.mpp.NativeBuildType.RELEASE
     }
 
-
     sourceSets {
 
         val commonMain by getting {
             dependencies {
-                implementation(com.lukninja.dependencies.Deps.Kotlin.dateTime)
-                implementation(com.lukninja.dependencies.Deps.Ktor.ktorClientCore)
-                implementation(com.lukninja.dependencies.Deps.Ktor.ktorClientSerialization)
-                implementation(com.lukninja.dependencies.Deps.Ktor.ktorLog)
-                implementation(com.lukninja.dependencies.Deps.Kotlin.coroutinesShared){
+                implementation(Deps.Kotlin.dateTime)
+                implementation(Deps.Ktor.ktorClientCore)
+                implementation(Deps.Ktor.ktorClientSerialization)
+                implementation(Deps.Ktor.ktorLog)
+                implementation(Deps.Kotlin.coroutinesShared){
                     version{
-                        strictly(com.lukninja.dependencies.Version.kotlinCoroutinesVersion)
+                        strictly(Version.kotlinCoroutinesVersion)
                     }
                 }
-                implementation(com.lukninja.dependencies.Deps.Kotlin.serialization)
-                implementation(com.lukninja.dependencies.Deps.SqlDelight.sqlDelightRuntime)
-                implementation(com.lukninja.dependencies.Deps.SqlDelight.sqlDelightCoroutineExtensions)
-                api(com.lukninja.dependencies.Deps.Log.kermit)
-                implementation(com.lukninja.dependencies.Deps.Log.kermitCrashlytics)
-                implementation(com.lukninja.dependencies.Deps.Touchlab.commonLib)
-                implementation(com.lukninja.dependencies.Deps.Koin.koinCore)
-                implementation(com.lukninja.dependencies.Deps.Ktor.ktorContentNegotiation)
-                implementation(com.lukninja.dependencies.Deps.Ktor.ktorJson)
-                implementation(com.lukninja.dependencies.Deps.Ktor.ktorEncoding)
+                implementation(Deps.Kotlin.serialization)
+                implementation(Deps.SqlDelight.sqlDelightRuntime)
+                implementation(Deps.SqlDelight.sqlDelightCoroutineExtensions)
+                api(Deps.Log.kermit)
+                implementation(Deps.Log.kermitCrashlytics)
+                implementation(Deps.Touchlab.commonLib)
+                implementation(Deps.Koin.koinCore)
+                implementation(Deps.Ktor.ktorContentNegotiation)
+                implementation(Deps.Ktor.ktorJson)
+                implementation(Deps.Ktor.ktorEncoding)
             }
         }
         val commonTest by getting {
@@ -80,14 +77,13 @@ kotlin {
             }
         }
 
-
         val androidMain by getting {
             dependencies {
-                implementation(com.lukninja.dependencies.Deps.Kotlin.kotlinStdLib)
-                implementation(com.lukninja.dependencies.Deps.Ktor.ktorClientAndroid)
-                implementation(com.lukninja.dependencies.Deps.SqlDelight.sqlDelightAndroid)
-                implementation(com.lukninja.dependencies.Deps.Klock.klockLib)
-                implementation(com.lukninja.dependencies.Deps.Koin.koinClientAndroid)
+                implementation(Deps.Kotlin.kotlinStdLib)
+                implementation(Deps.Ktor.ktorClientAndroid)
+                implementation(Deps.SqlDelight.sqlDelightAndroid)
+                implementation(Deps.Klock.klockLib)
+                implementation(Deps.Koin.koinClientAndroid)
             }
         }
         val androidTest by getting {
@@ -97,17 +93,15 @@ kotlin {
             }
         }
 
-
         val iosMain by getting {
             dependencies {
-                implementation(com.lukninja.dependencies.Deps.Ktor.ktorClientIos)
-                implementation(com.lukninja.dependencies.Deps.SqlDelight.sqlDelightIos)
-                api(com.lukninja.dependencies.Deps.Touchlab.crashKiOSClient)
+                implementation(Deps.Ktor.ktorClientIos)
+                implementation(Deps.SqlDelight.sqlDelightIos)
+                api(Deps.Touchlab.crashKiOSClient)
             }
         }
     }
 }
-
 
 kotlin.targets.withType(org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget::class.java) {
     binaries.all {
@@ -115,7 +109,6 @@ kotlin.targets.withType(org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarge
         binaryOptions["freezing"] = "disabled"
     }
 }
-
 
 android {
     compileSdk = 31
