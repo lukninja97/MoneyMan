@@ -11,7 +11,7 @@ object Version {
     const val klockVersion = "2.2.2"
     const val crashkIos = "0.4.0"
     const val koin = "3.1.4"
-    const val gradleAGPPlugin = "7.0.3"
+    const val gradleAGPPlugin = "7.2.1"
     const val kotlinDateTimeVersion = "0.3.1"
     const val materialVersion = "1.5.0"
     const val appCompatVersion = "1.3.1"
@@ -47,6 +47,7 @@ object Deps {
         const val ktorContentNegotiation = "io.ktor:ktor-client-content-negotiation:${Version.ktorVersion}"
         const val ktorJson = "io.ktor:ktor-serialization-kotlinx-json:${Version.ktorVersion}"
         const val ktorEncoding =  "io.ktor:ktor-client-encoding:${Version.ktorVersion}"
+        const val ktorOkHttp = "io.ktor:ktor-client-okhttp:${Version.ktorVersion}"
     }
 
     object Klock {

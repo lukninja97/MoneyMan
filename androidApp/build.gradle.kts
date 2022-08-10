@@ -12,7 +12,7 @@ android {
     compileSdk = 32
     defaultConfig {
         applicationId = "com.lukninja.timeon.android"
-        minSdk = 21
+        minSdk = 23
         targetSdk = 32
         versionCode = 1
         versionName = "1.0"

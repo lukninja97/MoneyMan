@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:title="Home"
+        android:icon="@drawable/ic_home"/>
+    <item
+        android:id="@+id/clock"
+        android:enabled="true"
+        android:title="Ponto"
+        android:icon="@drawable/ic_clock"/>
+    <item
+        android:id="@+id/money"
+        android:enabled="true"
+        android:title="Pagamento"
+        android:icon="@drawable/ic_money"/>
+</menu>

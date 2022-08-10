@@ -35,7 +35,7 @@ kotlin {
         ios.deploymentTarget = "14.1"
         podfile = project.file("../iosApp/Podfile")
         framework {
-            export(com.lukninja.dependencies.Deps.Log.kermit)
+            export(Deps.Log.kermit)
             isStatic = true
         }
 
@@ -84,6 +84,8 @@ kotlin {
                 implementation(Deps.SqlDelight.sqlDelightAndroid)
                 implementation(Deps.Klock.klockLib)
                 implementation(Deps.Koin.koinClientAndroid)
+                implementation(Deps.Ktor.ktorOkHttp)
+
             }
         }
         val androidTest by getting {
