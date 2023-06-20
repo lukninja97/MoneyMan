@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.lukninja.timeon.android">
+    package="com.lukninja.moneyman.android">
 
     <application
-        android:name=".application.TimeOnApplication"
+        android:name=".application.MoneyManApplication"
         android:label="Time On"
         android:allowBackup="false"
         android:supportsRtl="true"

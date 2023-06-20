@@ -12,8 +12,8 @@ plugins {
 version = "1.0"
 
 sqldelight {
-    database("TimeOnDatabase") {
-        packageName = "com.timeon.database"
+    database("MoneyManDatabase") {
+        packageName = "com.moneyman.database"
         sourceFolders = listOf("sqldelight")
     }
 }

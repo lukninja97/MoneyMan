@@ -11,7 +11,7 @@ plugins {
 android {
     compileSdk = 32
     defaultConfig {
-        applicationId = "com.lukninja.timeon.android"
+        applicationId = "com.lukninja.moneyman.android"
         minSdk = 23
         targetSdk = 32
         versionCode = 1

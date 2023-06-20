@@ -1,2 +1,2 @@
-# TimeOn
-O tempo não para
+# MoneyMan
+Gerenciando seus lucros
