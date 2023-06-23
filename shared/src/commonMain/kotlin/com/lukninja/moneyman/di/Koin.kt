@@ -10,7 +10,8 @@ import org.koin.dsl.KoinAppDeclaration
 import org.koin.dsl.module
 
 //iOS
-fun initKoin(countryCode: String? = null, regionCode: String? = null) = initKoin(countryCode, regionCode) {}
+fun initKoin(countryCode: String? = null, regionCode: String? = null) =
+    initKoin(countryCode, regionCode) {}
 
 fun initKoin(countryCode: String? = null,
              regionCode: String? = null,
@@ -18,8 +19,10 @@ fun initKoin(countryCode: String? = null,
              appDeclaration: KoinAppDeclaration = {}
 ) = startKoin {
     appDeclaration()
+
     modules(
         commonModule,
+        androidModule,
         module {
             //locale
             single {

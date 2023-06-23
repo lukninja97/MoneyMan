@@ -2,30 +2,33 @@ package com.lukninja.dependencies
 
 object Version {
 
-    const val kotlin = "1.6.20"
-    const val ktorVersion = "2.0.0"
+    const val kotlin = "1.7.22"
+    const val ktorVersion = "2.0.1"
     const val serializationVersion = "1.3.2"
     const val sqlDelightVersion = "1.5.3"
-    const val kotlinCoroutinesVersion = "1.6.0-native-mt"
+    const val kotlinCoroutinesVersion = "1.6.1-native-mt"
     const val kermitVersion = "1.0.3"
-    const val klockVersion = "2.2.2"
     const val crashkIos = "0.4.0"
-    const val koin = "3.1.4"
-    const val gradleAGPPlugin = "7.2.1"
+    const val koin = "3.1.6"
+    const val gradleAGPPlugin = "7.2.2"
     const val kotlinDateTimeVersion = "0.3.1"
-    const val materialVersion = "1.5.0"
-    const val appCompatVersion = "1.3.1"
-    const val constraintVersion = "2.1.0"
-    const val navigationVersion = "2.4.2"
     const val lifeCycleVersion = "2.4.1"
+    const val navigationVersion = "2.4.2"
+    const val constraintVersion = "2.1.0"
+    const val appCompatVersion = "1.6.1"
+    const val materialVersion = "1.5.0"
+    const val viewPager = "1.0.0"
+    const val safeArgs = "2.4.2"
+    const val coreVersion = "1.0.2"
     const val preferencesVersion = "1.1.1"
     const val dataStoreVersion = "1.0.0"
     const val activityVersion = "1.6.0-alpha03"
     const val fragmentVersion = "1.5.0"
-    const val viewPager = "1.0.0"
-    const val coreVersion = "1.0.2"
     const val playServicesLocationVersion = "18.0.0"
-    const val safeArgs = "2.4.2"
+    const val kotlinPlayServicesCoroutines = "1.6.1"
+    const val timberVersion = "5.0.1"
+    const val gmsVersion = "4.3.10"
+    const val cardView = "1.0.0"
 }
 
 object Deps {
@@ -35,6 +38,7 @@ object Deps {
         const val androidTools = "com.android.tools.build:gradle:${Version.gradleAGPPlugin}"
         const val sqlDelight = "com.squareup.sqldelight:gradle-plugin:${Version.sqlDelightVersion}"
         const val safeArgs = "androidx.navigation:navigation-safe-args-gradle-plugin:${Version.safeArgs}"
+        const val gms = "com.google.gms:google-services:${Version.gmsVersion}"
     }
 
     object Ktor {
@@ -48,10 +52,6 @@ object Deps {
         const val ktorJson = "io.ktor:ktor-serialization-kotlinx-json:${Version.ktorVersion}"
         const val ktorEncoding =  "io.ktor:ktor-client-encoding:${Version.ktorVersion}"
         const val ktorOkHttp = "io.ktor:ktor-client-okhttp:${Version.ktorVersion}"
-    }
-
-    object Klock {
-        const val klockLib = "com.soywiz.korlibs.klock:klock:${Version.klockVersion}"
     }
 
     object Koin {
@@ -78,12 +78,11 @@ object Deps {
     }
 
     object Kotlin {
-        const val serialization =
-            "org.jetbrains.kotlinx:kotlinx-serialization-json:${Version.serializationVersion}"
+        const val serialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:${Version.serializationVersion}"
         const val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib"
-        const val coroutinesShared =
-            "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Version.kotlinCoroutinesVersion}"
+        const val coroutinesShared = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Version.kotlinCoroutinesVersion}"
         const val dateTime = "org.jetbrains.kotlinx:kotlinx-datetime:${Version.kotlinDateTimeVersion}"
+        const val kotlinPlayServicesCoroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:${Version.kotlinPlayServicesCoroutines}"
     }
 
     object Material {
@@ -108,11 +107,11 @@ object Deps {
         const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Version.lifeCycleVersion}"
     }
 
-    object Preferences{
+    object Preferences {
         const val preferences = "androidx.preference:preference-ktx:${Version.preferencesVersion}"
     }
 
-    object DataStore{
+    object DataStore {
         const val dataStore = "androidx.datastore:datastore-preferences:${Version.dataStoreVersion}"
     }
     object Android {
@@ -121,5 +120,14 @@ object Deps {
         const val viewPager = "androidx.viewpager2:viewpager2:${Version.viewPager}"
         const val core = "androidx.core:core-ktx:${Version.coreVersion}"
         const val playServicesLocation = "com.google.android.gms:play-services-location:${Version.playServicesLocationVersion}"
+        const val cardview = "androidx.cardview:cardview:${Version.cardView}"
+    }
+
+    object Timber {
+        const val timberLog = "com.jakewharton.timber:timber:${Version.timberVersion}"
+    }
+
+    object Desugaring {
+        const val desugaringLibrary="com.android.tools:desugar_jdk_libs:1.1.5"
     }
 }

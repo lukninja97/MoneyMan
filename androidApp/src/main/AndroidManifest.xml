@@ -5,10 +5,12 @@
 
     <application
         android:name=".application.MoneyManApplication"
-        android:label="Time On"
+        android:label="Money Man"
         android:allowBackup="false"
+        android:hardwareAccelerated="true"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:largeHeap="true">
         <activity android:name=".views.SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.SplashScreen">
@@ -17,6 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
     </application>
 </manifest> 

@@ -82,10 +82,8 @@ kotlin {
                 implementation(Deps.Kotlin.kotlinStdLib)
                 implementation(Deps.Ktor.ktorClientAndroid)
                 implementation(Deps.SqlDelight.sqlDelightAndroid)
-                implementation(Deps.Klock.klockLib)
                 implementation(Deps.Koin.koinClientAndroid)
                 implementation(Deps.Ktor.ktorOkHttp)
-
             }
         }
         val androidTest by getting {
@@ -102,6 +100,12 @@ kotlin {
                 api(Deps.Touchlab.crashKiOSClient)
             }
         }
+    }
+}
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11.toString()
     }
 }
 
