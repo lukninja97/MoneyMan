@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardEmprestimos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvLblCredores"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvLblMensal"
+                    android:text="Credores" />
+
+                <TextView
+                    android:id="@+id/tvCredores"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLblCredores"
+                    app:layout_constraintStart_toStartOf="@+id/tvLblCredores"
+                    app:layout_constraintEnd_toEndOf="@+id/tvLblCredores"
+                    android:text="3" />
+
+                <TextView
+                    android:id="@+id/tvLblMensal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvLblCredores"
+                    app:layout_constraintEnd_toStartOf="@+id/tvLblMontante"
+                    android:text="Mensal" />
+
+                <TextView
+                    android:id="@+id/tvMensal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLblMensal"
+                    app:layout_constraintStart_toStartOf="@+id/tvLblMensal"
+                    app:layout_constraintEnd_toEndOf="@+id/tvLblMensal"
+                    android:text="3" />
+
+                <TextView
+                    android:id="@+id/tvLblMontante"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvLblMensal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="Montante" />
+
+                <TextView
+                    android:id="@+id/tvMontante"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLblMontante"
+                    app:layout_constraintStart_toStartOf="@+id/tvLblMontante"
+                    app:layout_constraintEnd_toEndOf="@+id/tvLblMontante"
+                    android:text="3" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/cardEmprestimos"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:listitem="@layout/list_item_devedor"
+            tools:itemCount="5"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

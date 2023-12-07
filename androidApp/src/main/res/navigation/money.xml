@@ -9,5 +9,5 @@
         android:id="@+id/moneyFragment"
         android:name="com.lukninja.moneyman.android.views.MoneyFragment"
         android:label="fragment_money"
-        tools:layout="@layout/fragment_money" />
+        tools:layout="@layout/fragment_clients" />
 </navigation>

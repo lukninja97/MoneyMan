@@ -5,12 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.lukninja.moneyman.android.databinding.FragmentMoneyBinding
+import com.lukninja.moneyman.android.databinding.FragmentOperationBinding
 
 class MoneyFragment : Fragment() {
 
-    private var _binding: FragmentMoneyBinding? = null
-    private val binding: FragmentMoneyBinding get() = _binding!!
+    private var _binding: FragmentOperationBinding? = null
+    private val binding: FragmentOperationBinding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,7 +21,7 @@ class MoneyFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentMoneyBinding.inflate(inflater, container, false)
+        _binding = FragmentOperationBinding.inflate(inflater, container, false)
         binding.lifecycleOwner = viewLifecycleOwner
         return binding.root
     }

@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.homeFragment,
-                R.id.clockFragment,
+                R.id.clientFragment,
                 R.id.moneyFragment
             )
         )
@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 R.id.homeFragment -> {
                     setTitleFragment(home.localizeString())
                 }
-                R.id.clockFragment -> {
+                R.id.clientFragment -> {
                     setTitleFragment(clock.localizeString())
                 }
                 R.id.moneyFragment -> {
